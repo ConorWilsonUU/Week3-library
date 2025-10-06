@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Week3_Library;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Createa new instance (object) of the Book class
+        // Note how the object name differs from the class name
+        Book book = new Book("C# for beginners", "Bill Gates", "1234567");
+
+       book.DisplayInfo();
+    }
+}
