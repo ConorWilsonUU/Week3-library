@@ -4,40 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week3_Library
+namespace Library
 {
-    public class Book
+    internal class Member
     {
-       private string title;
-       private string author;
-       private string isbn;
+        private int memberId;
+        private string name;
+        private string address;
+        private int phone;
 
-        public string Title
+        public int MemberId
         {
-            get { return title; }
-            set { title = value; }
+            get { return memberId; } 
+            set { memberId = value; }
         }
-        public string Author
+        public string Name
         {
-            get { return author; }
-            set { author = value; }
+            get { return name; }
+            set { name = value; }
         }
-        public string ISBN
+        public string Address
         {
-            get { return isbn; }
-            set { isbn = value; }
+            get { return address; }
+            set { address = value; }
         }
-
-        // Example of a constructor that allows us to 'construct' a new
-        // Book object
+        public int Phone
+        {
+            get { return phone; }
+            set { phone = value; }
+        }
+        // Constructor to add a new book
         public Book(string bookTitle, string bookAuthor, string bookISBN)
         {
             this.Title = bookTitle;
             this.Author = bookAuthor;
             this.ISBN = bookISBN;
         }
-
-        // Example of a method within the Book class
         public void DisplayInfo()
         {
             Console.WriteLine($"Book title: {Title}");
